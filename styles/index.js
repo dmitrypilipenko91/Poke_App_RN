@@ -9,5 +9,10 @@ export const styles = StyleSheet.create({
     },
     counter: {
       flexDirection: 'row'
+    },
+    pokeBlock: {
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      marginTop: '1px'
     }
   });
