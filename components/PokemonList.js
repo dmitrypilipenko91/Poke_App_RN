@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { ScrollView, Text, View } from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPokemonList } from "../asyncActions/fetchPokemonList";
 import { styles } from "../styles";
 
-const PokemonList = () => {
+const PokemonList = ( {navigation} ) => {
     const dispatch = useDispatch();
       
     const pokemonList = useSelector(state => state.pokeList.results);
@@ -16,15 +16,17 @@ const PokemonList = () => {
     useEffect(() => {
         addPokeList()
     }, []);
-    
+ 
     return(
-      <ScrollView>
-        <View>{pokemonList.map(poke => 
-          <View style={styles.pokeBlock} key={poke.name}>
+      <View>
+        <ScrollView contentContainerStyle={styles.pokeList}>{pokemonList.map(poke => 
+          <Pressable style={styles.pokeBlock}
+                key={poke.name}
+                onPress={() => navigation.navigate('Poke', {url: poke.url, pokeName: poke.name})}>
             <Text>{poke.name}</Text>
-          </View>)}
-        </View>
-      </ScrollView>
+          </Pressable>)}
+        </ScrollView>
+      </View>
     )
 };
 

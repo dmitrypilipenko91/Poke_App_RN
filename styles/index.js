@@ -5,14 +5,19 @@ export const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: 'lightgray'
     },
+    pokeList: {
+      alignItems: 'center'
+    },
     pokeBlock: {
       alignItems: 'center',
       justifyContent: 'center',
       borderStyle: 'solid',
       borderWidth: '1px',
-      marginTop: '1px',
+      borderRadius: '3px',
+      marginTop: '3px',
       padding: '3px',
-      backgroundColor: '#fff'
+      backgroundColor: '#fff',
+      width: '30%'
     },
     navbar: {
       alignItems: 'center',
@@ -25,5 +30,9 @@ export const styles = StyleSheet.create({
       color: 'yellow', 
       fontSize: '30px', 
       fontWeight: 'bold'
+    },
+    pokeImage: {
+      width: '200px',
+      height: '200px'
     }
   });

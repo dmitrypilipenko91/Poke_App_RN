@@ -7,13 +7,13 @@ import { store } from '../store';
 import { styles } from '../styles';
 
 
-export default function StartPage() {
+export default function StartPage( {navigation} ) {
   
   return (
     <Provider store={store}>
       <View style={styles.container}>
         <Navbar></Navbar>
-        <PokemonList></PokemonList>
+        <PokemonList navigation={navigation}></PokemonList>
       </View>
     </Provider>  
   );
