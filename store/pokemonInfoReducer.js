@@ -4,7 +4,7 @@ const defaultState = {
     results: {}
 }
 
-export const pokemonItemReducer = (state = defaultState, action) => {
+export const pokemonInfoReducer = (state = defaultState, action) => {
     switch (action.type) {
       case ADD_DATA:
         return {...state, results: action.payload}
@@ -13,4 +13,4 @@ export const pokemonItemReducer = (state = defaultState, action) => {
     }
 }
 
-export const addPokeItemAction = (payload) => ({type: ADD_DATA, payload});
+export const addPokeInfoAction = (payload) => ({type: ADD_DATA, payload});

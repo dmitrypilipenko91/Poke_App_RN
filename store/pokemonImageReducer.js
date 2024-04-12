@@ -1,4 +1,4 @@
-const ADD_DATA = 'add_data';
+const ADD_IMG_URL = 'add_img_url';
 
 const defaultState = {
     results: {}
@@ -6,11 +6,11 @@ const defaultState = {
 
 export const pokemonImageReducer = (state = defaultState, action) => {
     switch (action.type) {
-      case ADD_DATA:
+      case ADD_IMG_URL:
         return {...state, results: action.payload}
       default:
         return state
     }
 }
 
-export const addPokeImageAction = (payload) => ({type: ADD_DATA, payload});
+export const addPokeImageAction = (payload) => ({type: ADD_IMG_URL, payload});
